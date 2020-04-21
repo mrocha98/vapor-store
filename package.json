@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": false,
   "license": "WTFPL",
-  "homepage": "http://mrocha98.github.io/vapor-store",
   "dependencies": {
     "@sweetalert2/theme-dark": "^3.1.4",
     "@testing-library/jest-dom": "^4.2.4",
