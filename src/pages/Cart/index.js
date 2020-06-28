@@ -44,7 +44,7 @@ export default function Cart() {
       text:
         'Não foi possível realizar essa ação pois essa não é uma loja de verdade...',
       confirmButtonColor: '#e60efe',
-      confirmButtonText: 'ᕕ(◉_◉)ᕗ Fugir para as colinas',
+      confirmButtonText: 'ᕕ(◉_◉)ᕗ Fugir para às colinas',
     });
   }
 
