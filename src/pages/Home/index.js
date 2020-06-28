@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { ProductList } from './styles';
 import Loader from '../../components/Loader';
-import AsyncButton from '../../components/AsyncButton';
+import CartButton from '../../components/CartButton';
 import { formatPrice } from '../../util/format';
 import api from '../../services/api';
 import * as CartActions from '../../store/modules/cart/actions';
@@ -48,7 +48,7 @@ export default function Home() {
           <strong>{product.title}</strong>
           <span>{product.priceFormatted}</span>
 
-          <AsyncButton
+          <CartButton
             onClick={() => handleAddProduct(product.id)}
             amount={amount[product.id]}
           />

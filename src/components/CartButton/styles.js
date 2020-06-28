@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
-import { Spinner as GlobalSpinner } from '../Loader/styles';
 
 export const Button = styled.button`
   background: #e60efe;
@@ -37,14 +36,5 @@ export const Button = styled.button`
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
-  }
-`;
-
-export const Spinner = styled(GlobalSpinner)`
-  &,
-  &::after {
-    height: auto;
-    width: auto;
-    margin: 0 auto;
   }
 `;
