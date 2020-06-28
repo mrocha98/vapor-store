@@ -1,7 +1,6 @@
 import { call, select, put, all, takeLatest } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
 import api from '../../../services/api';
-import history from '../../../services/history';
 import { addToCartSuccess, updateAmountSuccess } from './actions';
 import { formatPrice } from '../../../util/format';
 
@@ -33,8 +32,8 @@ function* addToCart({ id }) {
     };
 
     yield put(addToCartSuccess(data));
-    history.push('/cart');
   }
+  toast.success('✔ Produto adicionado no carrinho.');
 }
 
 function* updateAmount({ id, amount }) {
@@ -44,7 +43,7 @@ function* updateAmount({ id, amount }) {
   const stockAmount = stock.data.amount;
 
   if (amount > stockAmount) {
-    toast.error('Quantidade solicitada fora de estoque.');
+    toast.error('✖ Quantidade solicitada fora de estoque.');
     return;
   }
 
